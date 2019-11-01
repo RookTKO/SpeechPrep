@@ -23,7 +23,7 @@ namespace SpeechPrep
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-superhero.css",
                       "~/Content/site.css"));
         }
     }
