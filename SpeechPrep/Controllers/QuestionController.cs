@@ -19,16 +19,18 @@ namespace SpeechPrep.Controllers
             var question = new Question() { InterviewQuestion = "How many pickles did peter pick on the pickling tree?" };
             return View(question);
         }
-        
+
         public ActionResult Questions()
         {
             var question = new Question() { InterviewQuestion = "How many pickles did peter pick on the pickling tree?" };
             return View(question);
         }
 
-        public ActionResult StarType(string star)
-        {
-            return Content(star);
-        }
+        ////TODO: Create view based on behavioral question types
+        //[Route("Question/{star}")]
+        //public ActionResult StarType(string star)
+        //{
+        //    return Content(star);
+        //}
     }
 }
