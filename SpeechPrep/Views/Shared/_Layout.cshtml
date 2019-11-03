@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - SpeechPrep</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         @Html.ActionLink("SpeechPrep", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse " id="navbarsExampleDefault">
-            <ul class="navbar-nav justify-content-end">
+        <div class="collapse navbar-collapse " id="navbar">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     @Html.ActionLink("Questions", "Questions", "Question", new { area = "" }, new { @class = "nav-link" })
                 </li>
@@ -28,7 +28,6 @@
 
         </div>
     </nav>
-
     <main role="main">
 
         <div class="container-fluid" style="padding-left:0px;padding-right:0px;">
@@ -37,7 +36,7 @@
             <footer style="padding:1rem;">
                 <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
             </footer>
-        </div> 
+        </div>
 
     </main>
     @Scripts.Render("~/bundles/jquery")
