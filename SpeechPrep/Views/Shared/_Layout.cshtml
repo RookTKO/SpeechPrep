@@ -8,36 +8,71 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class=" navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("SpeechPrep", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse ">
-                <ul class="nav navbar-nav navbar-right">
-                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
-                    <li>@Html.ActionLink("Questions","Questions", "Question")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Login", "Login", "Home")</li>
-                    @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        @Html.ActionLink("SpeechPrep", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    @Html.ActionLink("Questions", "Questions", "Question", new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Login", "Login", "Home", new { area = "" }, new { @class = "nav-link" })
+                </li>
+            </ul>
+
         </div>
-    </div>
-    <div class="container-fluid" style="padding-left:0px;padding-right:0px;">
+    </nav>
 
-         @RenderBody()
+    <main role="main">
 
-        <hr />
-        <footer style="padding:1rem;">
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <div class="container-fluid" style="padding-left:0px;padding-right:0px;">
+
+            @RenderBody()
+            <footer style="padding:1rem;">
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div> 
+
+    </main>
+    @*<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+                    <h5 class="my-0 mr-md-auto font-weight-normal">
+                    @Html.ActionLink("SpeechPrep", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </h5>
+                    <nav class="my-2 my-md-0 mr-md-3">
+                        <a class="p-2 text-dark" href="#">Features</a>
+                        <a class="p-2 text-dark" href="#">Enterprise</a>
+                        <a class="p-2 text-dark" href="#">Support</a>
+                        <a class="p-2 text-dark" href="#">Pricing</a>
+                    </nav>
+                    <a class="btn btn-outline-primary" href="#">Sign up</a>
+                </div>
+
+
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav ">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Questions", "Questions", "Question")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Login", "Login", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+
+        <div class="container-fluid" style="padding-left:0px;padding-right:0px;">
+
+             @RenderBody()
+
+            <hr />
+            <footer style="padding:1rem;">
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>*@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
