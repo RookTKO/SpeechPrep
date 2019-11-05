@@ -172,6 +172,10 @@
     <Compile Include="Migrations\201911050549335_PopulateQuestionMigration.designer.cs">
       <DependentUpon>201911050549335_PopulateQuestionMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911050608205_SeedDbTry2.cs" />
+    <Compile Include="Migrations\201911050608205_SeedDbTry2.designer.cs">
+      <DependentUpon>201911050608205_SeedDbTry2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -281,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911050549335_PopulateQuestionMigration.resx">
       <DependentUpon>201911050549335_PopulateQuestionMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911050608205_SeedDbTry2.resx">
+      <DependentUpon>201911050608205_SeedDbTry2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
