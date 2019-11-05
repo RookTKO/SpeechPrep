@@ -164,8 +164,13 @@
     <Compile Include="Migrations\201911042252299_InitMigration.designer.cs">
       <DependentUpon>201911042252299_InitMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911050541499_MembershipType.cs" />
+    <Compile Include="Migrations\201911050541499_MembershipType.designer.cs">
+      <DependentUpon>201911050541499_MembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -266,6 +271,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201911042252299_InitMigration.resx">
       <DependentUpon>201911042252299_InitMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911050541499_MembershipType.resx">
+      <DependentUpon>201911050541499_MembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
