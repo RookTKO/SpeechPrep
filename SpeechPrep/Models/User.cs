@@ -10,10 +10,12 @@ namespace SpeechPrep.Models
     public class User : IdentityUser
     {
         [Required]
-        public string FirstName { get; set; };
+        [StringLength(255)]
+        public string FirstName { get; set; }
         [Required]
-        public string LastName { get; set; };
-        public MembershipType MembershipType { get; set; };
-        public byte MembershipTypeId { get; set; };
+        [StringLength(255)]
+        public string LastName { get; set; }
+        public MembershipType MembershipType { get; set; }
+        public byte MembershipTypeId { get; set; }
     }
 }
