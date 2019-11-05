@@ -180,6 +180,10 @@
     <Compile Include="Migrations\201911050628289_DataAnnotationApplied.designer.cs">
       <DependentUpon>201911050628289_DataAnnotationApplied.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911050638255_UpdateWithApplicationDbContext.cs" />
+    <Compile Include="Migrations\201911050638255_UpdateWithApplicationDbContext.designer.cs">
+      <DependentUpon>201911050638255_UpdateWithApplicationDbContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -295,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911050628289_DataAnnotationApplied.resx">
       <DependentUpon>201911050628289_DataAnnotationApplied.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911050638255_UpdateWithApplicationDbContext.resx">
+      <DependentUpon>201911050638255_UpdateWithApplicationDbContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
