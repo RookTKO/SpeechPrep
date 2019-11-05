@@ -168,6 +168,10 @@
     <Compile Include="Migrations\201911050541499_MembershipType.designer.cs">
       <DependentUpon>201911050541499_MembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911050549335_PopulateQuestionMigration.cs" />
+    <Compile Include="Migrations\201911050549335_PopulateQuestionMigration.designer.cs">
+      <DependentUpon>201911050549335_PopulateQuestionMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -274,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911050541499_MembershipType.resx">
       <DependentUpon>201911050541499_MembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911050549335_PopulateQuestionMigration.resx">
+      <DependentUpon>201911050549335_PopulateQuestionMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
