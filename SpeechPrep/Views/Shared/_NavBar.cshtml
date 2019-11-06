@@ -1,0 +1,22 @@
+﻿
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    @Html.ActionLink("SpeechPrep", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                @Html.ActionLink("Questions", "Questions", "Question", new { area = "" }, new { @class = "nav-link" })
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })
+            </li>
+            <li class="nav-item">
+                @* TODO : Add modal for login link*@
+                @Html.ActionLink("Login", "Login", "Home", new { area = "" }, new { @class = "nav-link" })
+            </li>
+        </ul>
+
+    </div>
+</nav>
