@@ -25,15 +25,18 @@ namespace SpeechPrep.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
-        public ActionResult Random()
+        public ActionResult Random(int id)
         {
-            var question = new Question() { InterviewQuestion = "How many pickles did peter pick on the pickling tree?" };
+            var question = _context.Questions.SingleOrDefault(q => q.Id == id);
+            //var question = new Question() { InterviewQuestion = "How many pickles did peter pick on the pickling tree?" };
+            if (question == null)
+                return HttpNotFound();
             return View(question);
         }
 
         public ActionResult Questions()
         {
-            var question = _context.Questions;
+            var question = _context.Questions.ToList();
             return View(question);
         }
 
