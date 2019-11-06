@@ -1,4 +1,4 @@
-﻿@model SpeechPrep.Models.Question
+﻿@model IEnumerable<SpeechPrep.Models.Question>
 @{
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,8 +6,12 @@
     <div class="container">
         <h2 class="text-center">Behavioral Interview Questions</h2>
         <span>@Html.ActionLink("Random Question", "Random", "Question")</span>
-        <p>@Model.InterviewQuestion</p>
-        <p>Question 2</p>
-        <p>Question 3</p>
+
+        @foreach (var question in Model)
+        {
+
+            <p>@question.InterviewQuestion</p> 
+        }
+
     </div>
 
