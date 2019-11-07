@@ -3,6 +3,22 @@
     padding-bottom: 20px;
 }
 
+#navBarShadowIn {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    transition: box-shadow 0.7s;
+    transition-timing-function: linear;
+}
+
+#navBarShadowOut {
+    -webkit-box-shadow: 0 0px 0px 0px;
+    -moz-box-shadow: 0 0px 0px -0px;
+    box-shadow: 0 0px 0px 0px;
+    transition: box-shadow 0.5s;
+    transition-timing-function: ease-out;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;

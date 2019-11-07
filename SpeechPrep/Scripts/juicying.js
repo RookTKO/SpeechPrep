@@ -1,8 +1,11 @@
 ﻿"use strict";
 window.addEventListener("scroll", () => {
-    if (window.scrollY != 0) {
-        console.log("NavBar moved");
-        console.log(this.scrollY);
+    const navBar = document.getElementsByTagName("nav")[0];
+    if (this.scrollY != 0) {
+        navBar.setAttribute("id", "navBarShadowIn");
+    }
+    else {
+        navBar.setAttribute("id", "navBarShadowOut");
     }
 })
 console.log("test");
