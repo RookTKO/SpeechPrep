@@ -15,7 +15,7 @@ namespace SpeechPrep.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Preparing for an interview? Speech Prep is for you!";
 
             return View();
         }
