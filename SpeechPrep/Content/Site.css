@@ -3,6 +3,13 @@
     padding-bottom: 20px;
 }
 
+h1, h2, h3, h4, h5, h6, nav {
+    font-family: 'Abril Fatface', cursive;
+}
+
+p, span {
+    font-family: 'Roboto', sans-serif;
+}
 #navBarShadowIn {
     -webkit-box-shadow: 0 8px 5px -5px #777;
     -moz-box-shadow: 0 8px 5px -5px #777;
