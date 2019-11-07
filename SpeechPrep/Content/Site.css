@@ -4,9 +4,9 @@
 }
 
 #navBarShadowIn {
-    -webkit-box-shadow: 0 10px 6px -6px #777;
-    -moz-box-shadow: 0 10px 6px -6px #777;
-    box-shadow: 0 10px 6px -6px #777;
+    -webkit-box-shadow: 0 8px 5px -5px #777;
+    -moz-box-shadow: 0 8px 5px -5px #777;
+    box-shadow: 0 8px 5px -5px #777;
     transition: box-shadow 0.7s;
     transition-timing-function: linear;
 }
