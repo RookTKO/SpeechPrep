@@ -33,11 +33,11 @@ namespace SpeechPrep.Controllers
 
             return View();
         }
-        public ActionResult Login()
-        {
-            ViewBag.Message = "Log me In!";
+        //public ActionResult Login()
+        //{
+        //    ViewBag.Message = "Log me In!";
 
-            return View();
-        }
+        //    return View();
+        //}
     }
 }
