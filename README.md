@@ -1,6 +1,6 @@
 # Speech Prep
 
-This Automated Interview Assistant **(IAI)** will work with you to on behavioral questions commonly asked during interviews.
+This Automated Interview Assistant **(IAI)** will ask you behavioral questions commonly asked during interviews.
 
 ## Phase 1
 
