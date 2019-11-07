@@ -1,6 +1,13 @@
 # Speech Prep
 
-This Automated Interview Assistant **(IAI)** will work with you to on behavioral questions commonly asked during interviews.
+Speech Prep is an Automated Interview Assistant **(IAI)** that will ask you behavioral questions commonly asked during interviews.
+
+Speech Prep was born of a desire to better our interviewing skills as we began rehearsing for our upcoming interviews in the tech industry. 
+While many questions are answerable for any field you are interested in, you may see a few that are especially pertinent to those of us in the 
+field of technology. As we expand this service, it will become both more generalized in its question asking, but also more specific in the types
+of questions asked. 
+
+Speech Prep is being developed in three phases:
 
 ## Phase 1
 
