@@ -1,4 +1,4 @@
-﻿@model SpeechPrep.Models.User
+﻿
 <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
     @Html.ActionLink("SpeechPrep", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,12 +32,17 @@
                 </button>
             </div>
             <div class="modal-body">
-                @using (Html.BeginForm("Create", "User"))
+                @using (Html.BeginForm("Index", "UserProfileController", FormMethod.Post))
                 {
                     <div class="form-group">
-                        @Html.LabelFor(u => u.FirstName)
-                        @Html.TextBoxFor(u => u.FirstName, new { @class = "form-control" })
+                        @Html.Label("UserName", "User Name:")
+                        @Html.TextBox("UserName", null, new { @class = "form-control" })
                     </div>
+                    <div class="form-group">
+                        @Html.Label("Password", "Password:")
+                        @Html.TextBox("Password", null, new { @class = "form-control" })
+                    </div>
+                    Html.EndForm();
                 }
             </div>
             <div class="modal-footer">
