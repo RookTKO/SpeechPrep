@@ -15,7 +15,7 @@
             <li class="nav-item">
                 @* TODO : Add modal for login link*@
                 @*@Html.ActionLink("Login", "Login", "Home", new { area = "" }, new { @class = "nav-link", data_toggle = "modal", data_target = "exampleModalCenter" } )*@
-                <a class="nav-link"  data-toggle="modal" data-target="#userLogin">Login</a>
+                <a class="nav-link" data-toggle="modal" data-target="#userLogin">Login</a>
             </li>
         </ul>
 
@@ -32,11 +32,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                @using(Html.BeginForm("Create", "Users"))
+                @using (Html.BeginForm("Create", "User"))
                 {
                     <div class="form-group">
                         @Html.LabelFor(u => u.FirstName)
-                        @Html.TextBoxFor(u => u.FirstName, new { @class = "form-control"})
+                        @Html.TextBoxFor(u => u.FirstName, new { @class = "form-control" })
                     </div>
                 }
             </div>

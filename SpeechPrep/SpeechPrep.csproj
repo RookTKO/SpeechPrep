@@ -197,6 +197,18 @@
     <Compile Include="Migrations\201911062348239_UpdateQuestion.designer.cs">
       <DependentUpon>201911062348239_UpdateQuestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911081839396_QuestionModelUpdate.cs" />
+    <Compile Include="Migrations\201911081839396_QuestionModelUpdate.designer.cs">
+      <DependentUpon>201911081839396_QuestionModelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911081841453_UpdateMigration.cs" />
+    <Compile Include="Migrations\201911081841453_UpdateMigration.designer.cs">
+      <DependentUpon>201911081841453_UpdateMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911081849026_upDB.cs" />
+    <Compile Include="Migrations\201911081849026_upDB.designer.cs">
+      <DependentUpon>201911081849026_upDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Question.cs" />
@@ -325,6 +337,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911062348239_UpdateQuestion.resx">
       <DependentUpon>201911062348239_UpdateQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911081839396_QuestionModelUpdate.resx">
+      <DependentUpon>201911081839396_QuestionModelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911081841453_UpdateMigration.resx">
+      <DependentUpon>201911081841453_UpdateMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911081849026_upDB.resx">
+      <DependentUpon>201911081849026_upDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

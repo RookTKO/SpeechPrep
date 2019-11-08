@@ -1,19 +1,27 @@
-﻿@model IEnumerable<SpeechPrep.Models.Question>
+﻿@model  IEnumerable<SpeechPrep.Models.Question>
 @{
     Random rnd = new Random();
     int num = rnd.Next(0, 10);
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <div class="container">
-        <h2 class="text-center">Master Behavioral Interview Questions</h2>
-        <span>@Html.ActionLink(linkText: "Random Question", actionName: "Random/", controllerName: "Question", routeValues: new { id = num }, htmlAttributes: null)</span>
+<div class="container">
+    <h2 class="text-center">Master Behavioral Interview Questions</h2>
+    <span>@Html.ActionLink(linkText: "Random Question", actionName: "Random/", controllerName: "Question", routeValues: new { id = num }, htmlAttributes: null)</span>
 
-        @foreach (var question in Model)
-        {
-
-            <p>@question.InterviewQuestion</p> 
-        }
-
+    @foreach (var question in Model)
+    {
+    <div class="row">
+        <div class="col-6 mx-auto my-1">
+            <div class="card cardQuestion">
+                <div class="card-body">
+                    <p>@question.InterviewQuestion</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    }
+
+</div>
 
