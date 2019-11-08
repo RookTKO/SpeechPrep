@@ -1,4 +1,4 @@
-﻿
+﻿@model SpeechPrep.Models.User
 <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
     @Html.ActionLink("SpeechPrep", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,13 @@
                 </button>
             </div>
             <div class="modal-body">
-                ...
+                @using(Html.BeginForm("Create", "Users"))
+                {
+                    <div class="form-group">
+                        @Html.LabelFor(u => u.FirstName)
+                        @Html.TextBoxFor(u => u.FirstName, new { @class = "form-control"})
+                    </div>
+                }
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
