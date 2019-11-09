@@ -157,6 +157,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QuestionController.cs" />
+    <Compile Include="Controllers\UserProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -184,9 +185,32 @@
     <Compile Include="Migrations\201911050638255_UpdateWithApplicationDbContext.designer.cs">
       <DependentUpon>201911050638255_UpdateWithApplicationDbContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911060726279_testmigration.cs" />
+    <Compile Include="Migrations\201911060726279_testmigration.designer.cs">
+      <DependentUpon>201911060726279_testmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911060828219_Removale of Dropped Tables.cs" />
+    <Compile Include="Migrations\201911060828219_Removale of Dropped Tables.designer.cs">
+      <DependentUpon>201911060828219_Removale of Dropped Tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911062348239_UpdateQuestion.cs" />
+    <Compile Include="Migrations\201911062348239_UpdateQuestion.designer.cs">
+      <DependentUpon>201911062348239_UpdateQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911081839396_QuestionModelUpdate.cs" />
+    <Compile Include="Migrations\201911081839396_QuestionModelUpdate.designer.cs">
+      <DependentUpon>201911081839396_QuestionModelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911081841453_UpdateMigration.cs" />
+    <Compile Include="Migrations\201911081841453_UpdateMigration.designer.cs">
+      <DependentUpon>201911081841453_UpdateMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911081849026_upDB.cs" />
+    <Compile Include="Migrations\201911081849026_upDB.designer.cs">
+      <DependentUpon>201911081849026_upDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
-    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\User.cs" />
@@ -236,6 +260,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\juicying.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
@@ -261,7 +286,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Question\Random.cshtml" />
-    <Content Include="Views\Question\Questions.cshtml" />
+    <Content Include="Views\Question\Id.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
@@ -272,6 +297,8 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\UserProfile\Profile.cshtml" />
+    <Content Include="Views\Question\MasterList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -303,6 +330,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911050638255_UpdateWithApplicationDbContext.resx">
       <DependentUpon>201911050638255_UpdateWithApplicationDbContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911060726279_testmigration.resx">
+      <DependentUpon>201911060726279_testmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911060828219_Removale of Dropped Tables.resx">
+      <DependentUpon>201911060828219_Removale of Dropped Tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911062348239_UpdateQuestion.resx">
+      <DependentUpon>201911062348239_UpdateQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911081839396_QuestionModelUpdate.resx">
+      <DependentUpon>201911081839396_QuestionModelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911081841453_UpdateMigration.resx">
+      <DependentUpon>201911081841453_UpdateMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911081849026_upDB.resx">
+      <DependentUpon>201911081849026_upDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -15,7 +15,6 @@ namespace SpeechPrep.Models
         [Required]
         [StringLength(255)]
         public string LastName { get; set; }
-        public MembershipType MembershipType { get; set; }
-        public byte MembershipTypeId { get; set; }
+        public string Name { get; set; }
     }
 }
