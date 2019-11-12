@@ -209,6 +209,10 @@
     <Compile Include="Migrations\201911081849026_upDB.designer.cs">
       <DependentUpon>201911081849026_upDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911120640525_dbUpdate.cs" />
+    <Compile Include="Migrations\201911120640525_dbUpdate.designer.cs">
+      <DependentUpon>201911120640525_dbUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Question.cs" />
@@ -285,7 +289,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Question\Random.cshtml" />
     <Content Include="Views\Question\Id.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -348,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911081849026_upDB.resx">
       <DependentUpon>201911081849026_upDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911120640525_dbUpdate.resx">
+      <DependentUpon>201911120640525_dbUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
