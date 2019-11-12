@@ -12,14 +12,15 @@
     @foreach (var question in Model)
     {
     <div class="row">
-        
-        <div class="col-lg-6 mx-auto my-1">
-            <div class="card cardQuestion">
-                <div class="card-body">
-                    <p>@question.InterviewQuestion</p>
+        <a href="@Url.Action(actionName: "Id/", controllerName: "Question", routeValues: new { id = num })">
+            <div class="col-lg-6 mx-auto my-1">
+                <div class="card cardQuestion">
+                    <div class="card-body">
+                        <p>@question.InterviewQuestion</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 
     }
