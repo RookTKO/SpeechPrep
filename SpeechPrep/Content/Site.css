@@ -34,10 +34,12 @@ p, span {
     -moz-transition: all 0.45s ease-in-out;
     transition: all 0.45s ease-in-out;
 }
-.custom-card,
-.custom-card:hover {
-    color: red;
-    display: inline-block
+a.custom-card,
+a.custom-card:hover {
+    color: inherit;
+    display: inherit;
+    text-decoration: none;
+    width:100%;
 }
     .cardQuestion p::before {
         content:open-quote;
