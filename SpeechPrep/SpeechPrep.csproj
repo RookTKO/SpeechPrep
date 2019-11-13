@@ -68,6 +68,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="netstandard" />
     <Reference Include="dotenv.net, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\dotenv.net.1.0.6\lib\netstandard2.0\dotenv.net.dll</HintPath>
     </Reference>
@@ -415,6 +416,7 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Views\Shared\.env" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
