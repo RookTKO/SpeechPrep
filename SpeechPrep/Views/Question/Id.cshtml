@@ -3,7 +3,11 @@
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container">
-    <h2>Random Interview Question</h2>
-    <p>@Model.InterviewQuestion</p>
-</div>
+    <div class="container">
+        <h2>Random Interview Question</h2>
+        <p>@Model.InterviewQuestion</p>
+        <button onclick="responsiveVoice.speak('@Model.InterviewQuestion');"
+                type="button" value="Play">
+            Play
+        </button>
+    </div>
