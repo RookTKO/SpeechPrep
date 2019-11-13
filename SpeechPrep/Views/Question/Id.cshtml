@@ -3,42 +3,59 @@
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    #webCamVideo{
+        width: 50%;
+        height: 50%;
+        background-color: #666;
+        margin-left:25%;
+    }
+</style>
+
 <script>
     'use strict'
-    const video = document.getElementById('webCamVideo');
 
-    const styling = {
+    const contraints = {
         audio: true,
         video: {
-            width: 1280, height: 720
+            facingMode: "user" ,
+            width: { min: 1024, ideal: 1280, max: 1920 },
+            height: { min: 776, ideal: 720, max: 1080 }
         }
     };
-
-    async function init() {
-        try {
-            const stream = await navigator.mediaDevices.getUserMedia(styling);
-            handleSuccess(stream);
-        }
-        catch (e) {
-            console.log(e);
-        }
+    if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ audio: true, video: true, width: 300 })
+            .then((stream) =>{
+                const video = document.getElementById('webCamVideo');
+                window.stream = stream;
+                video.srcObject = stream;
+                video.onloadedmetadata = function (e) {
+                    video.play();
+                };
+            })
+            .catch((e) => {
+                console.log(" And you broke yet again. Take a look at this : ");
+                console.log(e);
+            });
     }
 
-    function handleSuccess(stream) {
-        window.stream = stream;
-        video.srcObject = steam;
-    }
-
-    init();
+  
 </script>
 
 
 
     <div class="container">
-        <h2>Random Interview Question</h2>
-        <p>@Model.InterviewQuestion</p>
-        <button onclick="responsiveVoice.speak('@Model.InterviewQuestion');" type="button" value="Play"> Ask Question </button>
-        <div id="webCamWrapper" style="border: 1px solid red">
-            <video autoplay id="webCamVideo"></video>
+        <div class="row">
+            <div class="col-12" >
+                <h2>Random Interview Question</h2>
+                <p>@Model.InterviewQuestion</p>
+                <button class="btn btn-outline-primary" onclick="responsiveVoice.speak('@Model.InterviewQuestion');" type="button" value="Play"> Ask Question </button>
+            </div>
+            <div class="col-12">
+                <div id="webCamWrapper">
+                    <video class=" " id="webCamVideo"></video>
+                </div>
+            </div>
         </div>
+        
     </div>
