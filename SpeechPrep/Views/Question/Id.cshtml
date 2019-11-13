@@ -39,15 +39,18 @@
     <div class="container">
         <div class="row">
             <div class="col-12" >
-                <h2 class="text-center">Random Interview Question</h2>
-                <p class="text-center">@Model.InterviewQuestion</p>
+                <h2 id="questionStyle"class="text-center">Random Interview Question</h2>
+                <p class="text-center ">@Model.InterviewQuestion</p>
 
             </div>
             <div class="col-12">
                 <div id="webCamWrapper">
                     <video class=" " id="webCamVideo"></video>
                 </div>
-                <button class="btn btn-outline-primary" onclick="responsiveVoice.speak('@Model.InterviewQuestion');" type="button" value="Play"> Ask Question </button>
+                <div class="text-center">
+                    <button class="btn btn-outline-primary" onclick="responsiveVoice.speak('@Model.InterviewQuestion');" type="button" value="Play"> Ask Question </button>
+                </div>
+                
             </div>
         </div>
         
