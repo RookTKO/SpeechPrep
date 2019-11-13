@@ -3,11 +3,42 @@
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script>
+    'use strict'
+    const video = document.getElementById('webCamVideo');
+
+    const styling = {
+        audio: true,
+        video: {
+            width: 1280, height: 720
+        }
+    };
+
+    async function init() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia(styling);
+            handleSuccess(stream);
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+
+    function handleSuccess(stream) {
+        window.stream = stream;
+        video.srcObject = steam;
+    }
+
+    init();
+</script>
+
+
+
     <div class="container">
         <h2>Random Interview Question</h2>
         <p>@Model.InterviewQuestion</p>
-        <button onclick="responsiveVoice.speak('@Model.InterviewQuestion');"
-                type="button" value="Play">
-            Play
-        </button>
+        <button onclick="responsiveVoice.speak('@Model.InterviewQuestion');" type="button" value="Play"> Ask Question </button>
+        <div id="webCamWrapper" style="border: 1px solid red">
+            <video autoplay id="webCamVideo"></video>
+        </div>
     </div>
