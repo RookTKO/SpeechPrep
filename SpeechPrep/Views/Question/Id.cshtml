@@ -3,14 +3,6 @@
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<style>
-    #webCamVideo{
-        width: 50%;
-        height: 50%;
-        background-color: #666;
-        margin-left:25%;
-    }
-</style>
 
 <script>
     'use strict'
@@ -47,14 +39,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12" >
-                <h2>Random Interview Question</h2>
-                <p>@Model.InterviewQuestion</p>
-                <button class="btn btn-outline-primary" onclick="responsiveVoice.speak('@Model.InterviewQuestion');" type="button" value="Play"> Ask Question </button>
+                <h2 class="text-center">Random Interview Question</h2>
+                <p class="text-center">@Model.InterviewQuestion</p>
+
             </div>
             <div class="col-12">
                 <div id="webCamWrapper">
                     <video class=" " id="webCamVideo"></video>
                 </div>
+                <button class="btn btn-outline-primary" onclick="responsiveVoice.speak('@Model.InterviewQuestion');" type="button" value="Play"> Ask Question </button>
             </div>
         </div>
         
