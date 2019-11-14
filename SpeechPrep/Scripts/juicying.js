@@ -9,6 +9,12 @@ window.addEventListener("scroll", () => {
         navBar.setAttribute("id", "navBarShadowOut");
     }
 })
-console.log("test");
 
+window.onload = function () {
+    console.log("working");
+    Particles.init({
+        selector: '.contextCanvasBG',
+        color: '#DA0463'
+    });
+};
 

@@ -32,7 +32,24 @@ p, span {
     margin-left: 25%;
 }
 
-#questionStyle{
+.contextCanvas {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.contextCanvasBG {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#questionStyle {
     border-bottom: 1px solid black;
 }
 .cardQuestion {
