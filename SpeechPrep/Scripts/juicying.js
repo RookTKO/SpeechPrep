@@ -1,5 +1,5 @@
 ﻿
-"use strict";
+//"use strict";
 window.addEventListener("scroll", () => {
     const navBar = document.getElementsByTagName("nav")[0];
     if (this.scrollY != 0) {
@@ -10,11 +10,12 @@ window.addEventListener("scroll", () => {
     }
 })
 
-window.onload = function () {
-    console.log("working");
-    Particles.init({
-        selector: '.contextCanvasBG',
-        color: '#DA0463'
-    });
-};
+console.log("testing 2");
+//window.onload = function () {
+//    console.log("working");
+//    Particles.init({
+//        selector: '.contextCanvasBG',
+//        color: '#DA0463'
+//    });
+//};
 
