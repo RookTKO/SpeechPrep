@@ -10,12 +10,11 @@ window.addEventListener("scroll", () => {
     }
 })
 
-console.log("testing 2");
-//window.onload = function () {
-//    console.log("working");
-//    Particles.init({
-//        selector: '.contextCanvasBG',
-//        color: '#DA0463'
-//    });
-//};
+window.onload = function () {
+    console.log("working");
+    Particles.init({
+        selector: '.contextCanvasBG',
+        color: '#DA0463'
+    });
+};
 
