@@ -1,0 +1,57 @@
+﻿@model SpeechPrep.Models.Question
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    'use strict'
+
+    const contraints = {
+        audio: true,
+        video: {
+            facingMode: "user" ,
+            width: { min: 1024, ideal: 1280, max: 1920 },
+            height: { min: 776, ideal: 720, max: 1080 }
+        }
+    };
+    if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ audio: true, video: true, width: 300 })
+            .then((stream) =>{
+                const video = document.getElementById('webCamVideo');
+                window.stream = stream;
+                video.srcObject = stream;
+                video.onloadedmetadata = function (e) {
+                    video.play();
+                };
+            })
+            .catch((e) => {
+                console.log(" And you broke yet again. Take a look at this : ");
+                console.log(e);
+            });
+    }
+
+  
+</script>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12" >
+                <h2 id="questionStyle"class="text-center">Random Interview Question</h2>
+                <p class="text-center ">@Model.InterviewQuestion</p>
+
+            </div>
+            <div class="col-12">
+                <div id="webCamWrapper">
+                    <video class=" " id="webCamVideo"></video>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-outline-primary" onclick="responsiveVoice.speak('@Model.InterviewQuestion');" type="button" value="Play"> Ask Question </button>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
