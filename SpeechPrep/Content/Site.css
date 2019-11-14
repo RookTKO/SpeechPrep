@@ -32,21 +32,22 @@ p, span {
     margin-left: 25%;
 }
 
-.contextCanvas {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+.jumbotron{
+    background-color: white;
 }
-.contextCanvasBG {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+.contextCanvas .contextCanvasBG {
+    display: block;
+    position: absolute;
+    /*width: 100% !important;
+    height: 14rem !important;*/
+    top: -40.1rem;
+    left: 0rem;
+    z-index: 0;
+}
+@media only screen and (max-width: 600px) {
+    .contextCanvas .contextCanvasBG {
+        top: -40.1rem;
+    }
 }
 
 #questionStyle {
@@ -93,6 +94,9 @@ a.custom-card:hover {
     padding-right: 15px;
 }
 
+.container{
+    padding-top: 5rem;
+}
 main{
     margin-top: 1rem;
 }
