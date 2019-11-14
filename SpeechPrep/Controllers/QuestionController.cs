@@ -34,9 +34,19 @@ namespace SpeechPrep.Controllers
             return View(question);
         }
 
-        public ActionResult Questions()
+        public ActionResult Id(int id)
+        {
+            var question = _context.Questions.SingleOrDefault(q => q.Id == id);
+            if (question == null)
+                return HttpNotFound();
+            return View(question);
+        }
+
+        public ActionResult MasterList()
         {
             var question = _context.Questions.ToList();
+            if (question == null)
+                return HttpNotFound();
             return View(question);
         }
 
