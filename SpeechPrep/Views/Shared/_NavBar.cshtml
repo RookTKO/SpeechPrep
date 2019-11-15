@@ -1,5 +1,5 @@
 ﻿
-<nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
+<nav id="navBarShadowOut" class="navbar navbar-expand-md navbar-light fixed-top bg-white">
     @Html.ActionLink("SpeechPrep", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -15,7 +15,7 @@
             <li class="nav-item">
                 @* TODO : Add modal for login link*@
                 @*@Html.ActionLink("Login", "Login", "Home", new { area = "" }, new { @class = "nav-link", data_toggle = "modal", data_target = "exampleModalCenter" } )*@
-                <a class="nav-link" data-toggle="modal" data-target="#userLogin">Login</a>
+                <a class="nav-link" href="" data-toggle="modal" data-target="#userLogin">Login</a>
             </li>
         </ul>
 

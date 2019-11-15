@@ -24,6 +24,11 @@ p, span {
     box-shadow: 0 0px 0px 0px;
     transition: box-shadow 0.5s;
     transition-timing-function: ease-out;
+    opacity: 0.8;
+}
+
+.nav-link:hover{
+    color: #48F2E3 !important;
 }
 #webCamVideo {
     width: 50%;
