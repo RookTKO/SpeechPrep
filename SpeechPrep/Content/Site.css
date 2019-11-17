@@ -24,6 +24,11 @@ p, span {
     box-shadow: 0 0px 0px 0px;
     transition: box-shadow 0.5s;
     transition-timing-function: ease-out;
+    opacity: 0.8;
+}
+
+.nav-link:hover{
+    color: #48F2E3 !important;
 }
 #webCamVideo {
     width: 50%;
@@ -32,26 +37,32 @@ p, span {
     margin-left: 25%;
 }
 
-.contextCanvas {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+
+/**Index JumboTron Particle Styling**/
+.jumbotron{
+    background-color: white;
 }
-.contextCanvasBG {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+.contextCanvas .contextCanvasBG {
+    display: block;
+    position: absolute;
+    /*width: 100% !important;
+    height: 14rem !important;*/
+    top: -40.1rem;
+    left: 0rem;
+    z-index: 0;
+}
+@media only screen and (max-width: 600px) {
+    .contextCanvas .contextCanvasBG {
+        top: -40.1rem;
+    }
 }
 
+
+/**Question Styling**/
 #questionStyle {
     border-bottom: 1px solid black;
 }
+
 .cardQuestion {
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -60,6 +71,7 @@ p, span {
     -moz-transition: all 0.45s ease-in-out;
     transition: all 0.45s ease-in-out;
 }
+
 a.custom-card,
 a.custom-card:hover {
     color: inherit;
@@ -93,6 +105,9 @@ a.custom-card:hover {
     padding-right: 15px;
 }
 
+.container{
+    padding-top: 5rem;
+}
 main{
     margin-top: 1rem;
 }
