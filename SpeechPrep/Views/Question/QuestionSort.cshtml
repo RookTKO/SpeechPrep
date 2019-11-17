@@ -1,0 +1,20 @@
+﻿@model  IEnumerable<SpeechPrep.Models.Question>
+@{
+    Random rnd = new Random();
+    int num = rnd.Next(0, 10);
+}
+@foreach (var question in Model)
+{
+    <div class="row">
+        <a href="@Url.Action(actionName: "Id/", controllerName: "Question", routeValues: new { id = num })" class="custom-card">
+            <div class="col-lg-6 mx-auto my-1">
+                <div class="card cardQuestion">
+                    <div class="card-body">
+                        <p>@question.InterviewQuestion</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+}

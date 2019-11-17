@@ -470,6 +470,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Profile\User.cshtml" />
     <Content Include="Views\Question\MasterList.cshtml" />
+    <Content Include="Views\Question\QuestionSort.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

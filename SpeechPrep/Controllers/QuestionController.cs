@@ -50,7 +50,10 @@ namespace SpeechPrep.Controllers
             return View(question);
         }
 
-
+        public ActionResult QuestionSort()
+        {
+            return View();
+        }
 
         ////TODO: Create view based on behavioral question types
         //[Route("Question/{star}")]
