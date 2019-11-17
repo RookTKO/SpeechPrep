@@ -21,12 +21,12 @@
                     "On average, each corporate job offer attracts 250 resumes. Of those candidates, 4 to 6 will get called for an interview, and only one will get the job."
                 </p>
             </blockquote>
-            <cite >(Glassdoor)</cite>
+            <cite>(Glassdoor)</cite>
 
         </div>
         <div class="col-md-6 text-right">
             <h2 class="text-center">Soft Skills Are Key</h2>
-            <blockquote >
+            <blockquote>
                 <p class="text-center">
                     How many interviews come before an offer?
                     <br />
@@ -41,6 +41,35 @@
                 </p>
             </blockquote>
             <cite>(2017 Recruiter Sentiment Study MRI Network)</cite>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h2 >Top Tech Company Questions</h2>
+                <p >
+                    Amazon | Microsoft | Google | Facebook | Netflix
+                </p>
+        </div>
+        <div class="col-md-6 text-center">
+            <h2 class="text-center">Test our feedback system today</h2>
+            <p>Try our behavioral interview feedback system today free of charge! Get verbal and physical feedback and share it with your
+            peers on social media to get even more feedback!</p>
+            <p>
+                @* TODO : Static Randome Page - Change to dynamic by querying data base for full length of questions
+                    You can use something all the following lines:    
+                    string queryString = 
+                            "SELECT DATALENGTH(column) FROM FROM dbo.Table";
+                        using (SqlConnection connection = new SqlConnection(
+                                   connectionString))
+                        {
+                            SqlCommand command = new SqlCommand(
+                                queryString, connection);
+                            connection.Open();
+                    
+                    *@
+                <span class="text-center">@Html.ActionLink(linkText: "Random Question", actionName: "Id/", controllerName: "Question", routeValues: new { id = 2 , @class = "text-center" }, htmlAttributes: null)</span>
+            </p>
         </div>
     </div>
 
