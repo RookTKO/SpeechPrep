@@ -377,6 +377,10 @@
     <Compile Include="Migrations\201911120640525_dbUpdate.designer.cs">
       <DependentUpon>201911120640525_dbUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911170729084_PatchUpdate.cs" />
+    <Compile Include="Migrations\201911170729084_PatchUpdate.designer.cs">
+      <DependentUpon>201911170729084_PatchUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Question.cs" />
@@ -518,6 +522,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911120640525_dbUpdate.resx">
       <DependentUpon>201911120640525_dbUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911170729084_PatchUpdate.resx">
+      <DependentUpon>201911170729084_PatchUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -8,7 +8,23 @@
         public bool Favorite { get; set; }
         public bool SavedForLater { get; set; }
         public bool Completed { get; set; }
-
+        public TechCompanies Company { get; set; }
+        public enum TechCompanies
+        {
+            Amazon,
+            Microsoft,
+            Google,
+            Facebook,
+            Netflix,
+            Apple
+        }
+        public CoreValues Core { get; set; }
+        public enum CoreValues
+        {
+            Leadership,
+            Ownership,
+            Customer
+        }
         //TODO: Either use enums for question state or use methods.
         //public static bool IsFavoritedQuestion()
         //{
