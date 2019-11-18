@@ -10,14 +10,14 @@
     const contraints = {
         audio: true,
         video: {
-            facingMode: "user" ,
+            facingMode: "user",
             width: { min: 1024, ideal: 1280, max: 1920 },
             height: { min: 776, ideal: 720, max: 1080 }
         }
     };
     if (navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia({ audio: true, video: true, width: 300 })
-            .then((stream) =>{
+            .then((stream) => {
                 const video = document.getElementById('webCamVideo');
                 window.stream = stream;
                 video.srcObject = stream;
@@ -30,28 +30,37 @@
                 console.log(e);
             });
     }
-
-  
 </script>
 
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12" >
-                <h2 id="questionStyle"class="text-center">Random Interview Question</h2>
-                <p class="text-center ">@Model.InterviewQuestion</p>
-
-            </div>
-            <div class="col-12">
-                <div id="webCamWrapper">
-                    <video class=" " id="webCamVideo"></video>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-outline-primary" onclick="responsiveVoice.speak('@Model.InterviewQuestion');" type="button" value="Play"> Ask Question </button>
-                </div>
-                
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 id="questionStyle" class="text-center">@Model.InterviewQuestion</h2>
         </div>
-        
+        <div class="col-12">
+            <div id="webCamWrapper">
+                <video class=" " id="webCamVideo"></video>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-outline-primary" onclick="responsiveVoice.speak('@Model.InterviewQuestion');" type="button" value="Play"> Ask Question </button>
+                
+                @* Stopwatch *@
+            <div id="timerContainer">
+                <div class="timer" onclick="startTimer()">Start Timer!</div>
+                <div class="startTimer reset" onclick="startTimer()">
+                    Start
+                </div>
+                <div class="pauseTimer reset" onclick="pauseTimer()">
+                    Pause
+                </div>
+                <div class="resetTimer reset" onclick="resetTimer()">Reset</div>
+            </div>
+            <script type="text/javascript" src="~/Scripts/stopWatch.js"></script>
+                @* End Stopwatch *@
+            </div>
+
+        </div>
     </div>
+
+</div>
+
