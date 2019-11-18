@@ -8,6 +8,8 @@
         public bool Favorite { get; set; }
         public bool SavedForLater { get; set; }
         public bool Completed { get; set; }
+        public string Company { get; set; }
+
 
         //TODO: Either use enums for question state or use methods.
         //public static bool IsFavoritedQuestion()
