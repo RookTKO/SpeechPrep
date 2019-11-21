@@ -1,39 +1,16 @@
-﻿@model  IEnumerable<SpeechPrep.Models.Question>
+﻿@*@model  IEnumerable<SpeechPrep.Models.Question>*@
 @{
-    Random rnd = new Random();
-    int num = rnd.Next(0, 10);
     ViewBag.Title = "Master Behavioral Interview Questions";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <div class="container">
-        <h2 class="text-center">Master Behavioral Interview Questions</h2>
-        <div class="row text-center">
-            @* Center Random Question*@
-            <span>@Html.ActionLink(linkText: "Random Question", actionName: "Id/", controllerName: "Question", routeValues: new { id = num }, htmlAttributes: new { @class = "text-center" })</span>
-        </div>
+<div class="container">
+    <h2 class="text-center">Master Behavioral Interview Questions</h2>
 
-        @* Fix filtering/ Partial View maybe?*@
-        @*<div class="row">
-            @using (Html.BeginForm("MasterList", "Question", FormMethod.Post))
-            {
-                <div class="form-group">
-                    @Html.LabelFor(x => x.StarType)
-                    @Html.TextBoxFor(x => x.StarType, new { @class = "form-control" })
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(x => x.Company)
-                    @Html.EnumDropDownListFor(m => m.Company, new { @class = "form-control" })
-                </div>
-                <div class="form-group">
-                    <div class="controls">
-                        <input type="submit" class="btn btn-outline-primary" value="Submit Values" />
-                    </div>
-                </div>
-                Html.EndForm();
-            }
-        </div>*@
+    @* Navigational Bar for Sorting through the questions *@
+    @Html.Partial("_QuestionNavSort")
 
-        @Html.Partial("QuestionSort");
+    @* Filtered Question List *@
+    @Html.Partial("_QuestionSort")
 
-    </div>
+</div>
 

@@ -25,14 +25,7 @@ namespace SpeechPrep.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
-        public ActionResult Random(int id)
-        {
-            var question = _context.Questions.SingleOrDefault(q => q.Id == id);
-            //var question = new Question() { InterviewQuestion = "How many pickles did peter pick on the pickling tree?" };
-            if (question == null)
-                return HttpNotFound();
-            return View(question);
-        }
+
 
         public ActionResult Id(int id)
         {
@@ -50,7 +43,12 @@ namespace SpeechPrep.Controllers
             return View(question);
         }
 
-        public ActionResult QuestionSort()
+        public ActionResult _QuestionSort()
+        {
+            return View();
+        }
+
+        public ActionResult _QuestionNavSort()
         {
             return View();
         }

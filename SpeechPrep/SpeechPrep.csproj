@@ -466,7 +466,8 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Profile\User.cshtml" />
     <Content Include="Views\Question\MasterList.cshtml" />
-    <Content Include="Views\Question\QuestionSort.cshtml" />
+    <Content Include="Views\Question\_QuestionSort.cshtml" />
+    <Content Include="Views\Question\_QuestionNavSort.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
