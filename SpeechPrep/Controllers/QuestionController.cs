@@ -50,14 +50,9 @@ namespace SpeechPrep.Controllers
 
         public ActionResult _QuestionNavSort()
         {
-            return View();
+            //var techCompany = _context.Questions.
+            return PartialView();
         }
 
-        ////TODO: Create view based on behavioral question types
-        //[Route("Question/{star}")]
-        //public ActionResult StarType(string star)
-        //{
-        //    return Content(star);
-        //}
     }
 }
