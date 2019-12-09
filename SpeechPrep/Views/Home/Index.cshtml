@@ -5,6 +5,10 @@
     //string queryID = "SELECT Id FROM dbo.Questions ORDER BY RAND() LIMIT 1";
     //var randomID = db.QueryValue(queryID);
     // Issue with querying database, breaks at db.QueryValue
+
+    //Place holder for random value
+    Random rnd = new Random();
+    int num = rnd.Next(0, 10);
 }
 <div class="jumbotron">
     <div class="contextCanvas">
@@ -66,7 +70,7 @@
                 @{
                 //TODO: Add random id value from database into id
                  }
-            <span class="text-center">@Html.ActionLink(linkText: "Random Question", actionName: "Id/", controllerName: "Question", routeValues: new { id = 2, @class = "text-center" }, htmlAttributes: null)</span>
+            <span class="text-center">@Html.ActionLink(linkText: "Random Question", actionName: "Id/", controllerName: "Question", routeValues: new { id = num, @class = "text-center" }, htmlAttributes: null)</span>
             </p>
         </div>
     </div>

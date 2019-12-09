@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SpeechPrep.Models;
+using SpeechPrep.ViewModels;
 
 namespace SpeechPrep.Controllers
 {
@@ -37,10 +38,15 @@ namespace SpeechPrep.Controllers
 
         public ActionResult MasterList()
         {
-            var question = _context.Questions.ToList();
-            if (question == null)
+            var questions = _context.Questions.ToList();
+            if (questions == null)
                 return HttpNotFound();
-            return View(question);
+            var viewModel = new QuestionsListViewModel
+            {
+                QuestionList = questions
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult _QuestionSort()

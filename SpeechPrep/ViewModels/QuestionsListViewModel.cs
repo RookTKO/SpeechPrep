@@ -8,6 +8,6 @@ namespace SpeechPrep.ViewModels
 {
     public class QuestionsListViewModel
     {
-        public IEnumerable<Question> Questions { get; set; }
+        public IEnumerable<Question> QuestionList { get; set; }
     }
 }
