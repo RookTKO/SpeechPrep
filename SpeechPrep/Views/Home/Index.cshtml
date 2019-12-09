@@ -1,10 +1,14 @@
 ﻿
 @{
     ViewBag.Title = "Home Page";
+    var db = WebMatrix.Data.Database.Open("DefaultConnection");
+    string queryID = "SELECT Id FROM dbo.Questions ORDER BY RAND() LIMIT 1";
+    string query = "SELECT * FROM Questions";
+//var randomID = db.QueryValue(queryID);
 }
 <div class="jumbotron">
     <div class="contextCanvas">
-        <h1 style="position:relative; z-index:1;"class="text-center">SpeechPrep</h1>
+        <h1 style="position:relative; z-index:1;" class="text-center">SpeechPrep</h1>
         <p style="position:relative; z-index:1; text-shadow: 1px 1px 2px rgba(0,0,0, 0.25);" class="text-center lead">For Professionals By Professionals</p>
         <p style="position:relative; z-index:1; " class="text-center"><a href="" data-toggle="modal" data-target="#userLogin" class="btn btn-outline-info btn-lg">Register Today! &raquo;</a></p>
         <canvas class="contextCanvasBG"></canvas>
@@ -12,7 +16,7 @@
 </div>
 <div class="container">
 
-
+    console.log(@db);
     <div class="row">
         <div class="col-md-6 text-right">
             <h2 class="text-center">Don't Limit Yourself</h2>
@@ -25,6 +29,10 @@
 
         </div>
         <div class="col-md-6 text-right">
+            @foreach (var row in db.Query(query))
+            {
+                <p>@row.Id</p>
+            }
             <h2 class="text-center">Soft Skills Are Key</h2>
             <blockquote>
                 <p class="text-center">
@@ -46,29 +54,24 @@
 
     <div class="row">
         <div class="col-md-6 text-center">
-            <h2 >Top Tech Company Questions</h2>
-                <p >
-                    Amazon | Microsoft | Google | Facebook | Netflix
-                </p>
+            <h2>Top Tech Company Questions</h2>
+            <p>
+                Amazon | Microsoft | Google | Facebook | Netflix
+            </p>
         </div>
         <div class="col-md-6 text-center">
             <h2 class="text-center">Test our feedback system today</h2>
-            <p>Try our behavioral interview feedback system today free of charge! Get verbal and physical feedback and share it with your
-            peers on social media to get even more feedback!</p>
             <p>
-                @* TODO : Static Randome Page - Change to dynamic by querying data base for full length of questions
-                    You can use something all the following lines:    
-                    string queryString = 
-                            "SELECT DATALENGTH(column) FROM FROM dbo.Table";
-                        using (SqlConnection connection = new SqlConnection(
-                                   connectionString))
-                        {
-                            SqlCommand command = new SqlCommand(
-                                queryString, connection);
-                            connection.Open();
-                    
-                    *@
-                <span class="text-center">@Html.ActionLink(linkText: "Random Question", actionName: "Id/", controllerName: "Question", routeValues: new { id = 2 , @class = "text-center" }, htmlAttributes: null)</span>
+                Try our behavioral interview feedback system today free of charge! Get verbal and physical feedback and share it with your
+                peers on social media to get even more feedback!
+            </p>
+            <p>
+
+
+                @{
+                    //TODO: Add random id value from database
+                 }
+            <span class="text-center">@Html.ActionLink(linkText: "Random Question", actionName: "Id/", controllerName: "Question", routeValues: new { id = 2, @class = "text-center" }, htmlAttributes: null)</span>
             </p>
         </div>
     </div>
