@@ -1,10 +1,10 @@
 ﻿
 @{
     ViewBag.Title = "Home Page";
-    var db = WebMatrix.Data.Database.Open("DefaultConnection");
-    string queryID = "SELECT Id FROM dbo.Questions ORDER BY RAND() LIMIT 1";
-    string query = "SELECT * FROM Questions";
-//var randomID = db.QueryValue(queryID);
+    //var db = WebMatrix.Data.Database.Open("DefaultConnection");
+    //string queryID = "SELECT Id FROM dbo.Questions ORDER BY RAND() LIMIT 1";
+    //var randomID = db.QueryValue(queryID);
+    // Issue with querying database, breaks at db.QueryValue
 }
 <div class="jumbotron">
     <div class="contextCanvas">
@@ -16,7 +16,6 @@
 </div>
 <div class="container">
 
-    console.log(@db);
     <div class="row">
         <div class="col-md-6 text-right">
             <h2 class="text-center">Don't Limit Yourself</h2>
@@ -29,10 +28,6 @@
 
         </div>
         <div class="col-md-6 text-right">
-            @foreach (var row in db.Query(query))
-            {
-                <p>@row.Id</p>
-            }
             <h2 class="text-center">Soft Skills Are Key</h2>
             <blockquote>
                 <p class="text-center">
@@ -69,7 +64,7 @@
 
 
                 @{
-                    //TODO: Add random id value from database
+                //TODO: Add random id value from database into id
                  }
             <span class="text-center">@Html.ActionLink(linkText: "Random Question", actionName: "Id/", controllerName: "Question", routeValues: new { id = 2, @class = "text-center" }, htmlAttributes: null)</span>
             </p>
