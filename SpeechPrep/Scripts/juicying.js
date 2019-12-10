@@ -14,6 +14,7 @@ window.addEventListener("scroll", () => {
 
 //Settings for partial.js framework
 //TODO: Create option that if CDN for partial.js isn't working to use local library partial.js (get partial.js)
+//Add option to check if contextCanvasBG exists on page/ check if page is index? then load
 window.onload = function () {
     console.log("working");
     Particles.init({
@@ -66,3 +67,6 @@ window.onload = function () {
     });
 
 };
+
+
+
