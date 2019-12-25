@@ -24,7 +24,7 @@
                 </div>
 
                 @* Stopwatch *@
-                <div id="timerContainer">
+                @*<div id="timerContainer">
                     <div class="timer" onclick="startTimer()">Start Timer!</div>
                     <div class="startTimer reset" onclick="startTimer()">
                         Start
@@ -34,10 +34,10 @@
                     </div>
                     <div class="resetTimer reset" onclick="resetTimer()">Reset</div>
                 </div>
-                <script type="text/javascript" src="~/Scripts/stopWatch.js"></script>
+                <script type="text/javascript" src="~/Scripts/stopWatch.js"></script>*@
                 @* End Stopwatch *@
-                <div class="response">
-                    <p>Tests</p>
+                <div class="transcript">
+                    <p class="d-none">Test</p>
 
                 </div>
             </div>
@@ -81,10 +81,10 @@
         recognition.interimResults = true;
 
         let p = document.createElement('p');
-        const speech = document.querySelector('.response');
+        const speech = document.querySelector('.transcript');
         speech.appendChild(p);
 
-        recognition.addEventListener('result', e => {
+        recognition.addEventListener('transcript', e => {
             const transcript = Array.from(e.results)
                 .map(result => result[0])
                 .map(result => result.transcript)
@@ -98,7 +98,8 @@
             }
             console.log(transcript);
         })
-        recognition.addEventListener('end', recognition.start);
+        recognition.addEventListener('end', recognition.start); //After end remove d-none to show content
+        //Create button to start and stop recognition and show transcript
         recognition.start();
         /*
          * To find stutter words use ->
