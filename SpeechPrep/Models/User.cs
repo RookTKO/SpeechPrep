@@ -15,6 +15,11 @@ namespace SpeechPrep.Models
         [Required]
         [StringLength(255)]
         public string LastName { get; set; }
-        public string Name { get; set; }
+        [Required]
+        [StringLength(255)]
+        public string CustomerUserName { get; set; }
+        [Required]
+        [StringLength(255)]
+        public string EmailAdress { get; set; }
     }
 }
